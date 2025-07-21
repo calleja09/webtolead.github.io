@@ -98,7 +98,7 @@
                                 </span>
                             </a>
                             <a class="mr-5 hover:text-gray-900 cursor-pointer">Forums
-                                <span class="material-symbols-outlined align-middle"></span>
+                                <span class="material-symbols-outlined align-middle">
                                     keyboard_arrow_down
                                 </span>
                             </a>
@@ -154,33 +154,35 @@
         </div>
 
         <div class="relative rounded-xl">
-            <form id="webToLeadForm" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DGA000008JhM1" method="POST" class="flex flex-col bg-white rounded border border-gray-200 shadow-2xl/30 p-6 sm:p-8 md:p-12 m-4 sm:m-8 md:m-10 mx-auto w-full max-w-lg">
-                <div class="mb-8 text-center">
-                    <p class="text-2xl sm:text-3xl font-bold">Let’s Get Started!</p>
-                    <p class="text-xs sm:text-sm">Fill out the form below and our team will reach out to you shortly with the information you need.</p>
-                </div>
-                <input type="hidden" name="oid" value="00DGA000008JhM1" />
-                <input type="hidden" name="retURL" value="https://delexpharma.com/" />
-                <label for="first_name" class="mb-1 mt-2 text-sm font-medium">First Name</label>
-                <input id="first_name" maxlength="40" name="first_name" size="20" type="text" required class="w-full" />
-                
-                <label for="last_name" class="mb-1 mt-2 text-sm font-medium">Last Name</label>
-                <input id="last_name" maxlength="80" name="last_name" size="20" type="text" required class="w-full" />
+            <div class="flex justify-center">
+                <form id="webToLeadForm" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DGA000008JhM1" method="POST" class="flex flex-col bg-white rounded border border-gray-200 shadow-2xl/30 p-6 sm:p-8 md:p-12 m-4 sm:m-8 md:m-10 w-full max-w-lg">
+                    <div class="mb-8 text-center">
+                        <p class="text-2xl sm:text-3xl font-bold">Let’s Get Started!</p>
+                        <p class="text-xs sm:text-sm">Fill out the form below and our team will reach out to you shortly with the information you need.</p>
+                    </div>
+                    <input type="hidden" name="oid" value="00DGA000008JhM1" />
+                    <input type="hidden" name="retURL" value="https://delexpharma.com/" />
+                    <label for="first_name" class="mb-1 mt-2 text-sm font-medium">First Name</label>
+                    <input id="first_name" maxlength="40" name="first_name" size="20" type="text" required class="w-full" />
+                    
+                    <label for="last_name" class="mb-1 mt-2 text-sm font-medium">Last Name</label>
+                    <input id="last_name" maxlength="80" name="last_name" size="20" type="text" required class="w-full" />
 
-                <label for="email" class="mb-1 mt-2 text-sm font-medium">Email</label>
-                <input id="email" maxlength="80" name="email" size="20" type="text" required class="w-full" />
+                    <label for="email" class="mb-1 mt-2 text-sm font-medium">Email</label>
+                    <input id="email" maxlength="80" name="email" size="20" type="text" required class="w-full" />
 
-                <label for="company" class="mb-1 mt-2 text-sm font-medium">Company</label>
-                <input id="company" maxlength="40" name="company" size="20" type="text" required class="w-full" />
-                
-                <label for="city" class="mb-1 mt-2 text-sm font-medium">City</label>
-                <input id="city" maxlength="40" name="city" size="20" type="text" required class="w-full" />
-                
-                <label for="state" class="mb-1 mt-2 text-sm font-medium">State/Province</label>
-                <input id="state" maxlength="20" name="state" size="20" type="text" required class="w-full" />
+                    <label for="company" class="mb-1 mt-2 text-sm font-medium">Company</label>
+                    <input id="company" maxlength="40" name="company" size="20" type="text" required class="w-full" />
+                    
+                    <label for="city" class="mb-1 mt-2 text-sm font-medium">City</label>
+                    <input id="city" maxlength="40" name="city" size="20" type="text" required class="w-full" />
+                    
+                    <label for="state" class="mb-1 mt-2 text-sm font-medium">State/Province</label>
+                    <input id="state" maxlength="20" name="state" size="20" type="text" required class="w-full" />
 
-                <input type="submit" name="submit" id="submitBtn" class="text-white font-bold w-full sm:w-80 mx-auto mt-6" />
-            </form>
+                    <input type="submit" name="submit" id="submitBtn" class="text-white font-bold w-full sm:w-80 mx-auto mt-6" />
+                </form>
+            </div>
         </div>
         <div class="container"></div>
     </body>
