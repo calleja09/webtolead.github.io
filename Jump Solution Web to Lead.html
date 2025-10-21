@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- TAILWIND CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <!-- GOOGLE FONTS -->
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Material+Symbols+Outlined&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900" rel="stylesheet" />
+        <!-- FAVICON -->
+        <link rel="icon" type="image/png" href="https://jumpsolutions.ph/wp-content/uploads/2021/03/jumpsolitions.png" />
+        <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <script>
+        function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
+        </script>
+
+        <!--  ----------------------------------------------------------------------  -->
+        <!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+        <!--  If necessary, please modify the charset parameter to specify the        -->
+        <!--  character set of your HTML page.                                        -->
+        <!--  ----------------------------------------------------------------------  -->
+        <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+        <title>Web-to-Lead</title>
+    </head>
+    <style>
+        :root {
+            --primary-color: #9f0100;
+            --dark-color: #2a2a2a;
+            --poppins: 'Poppins', sans-serif;
+            --anton: 'Anton', sans-serif;
+        }
+        .poppins-regular {
+            font-family: var(--poppins);
+            font-weight: 500;
+            font-style: normal;
+        }
+        .anton-regular {
+            font-family: var(--anton);
+            font-weight: 500;
+            font-style: normal;
+        }
+        nav a {
+            color: var(--dark-color);
+            font-weight: 500;
+            position: relative;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover:after {
+            width: 100%;
+        }
+        nav a:hover {
+            color: var(--primary-color);
+        }
+        
+        label{
+           margin-bottom: 10px; 
+        }
+        input{
+            background-color: hsla(235, 21%, 34%, 0.193) ;
+            border-radius: 8px;
+            padding: 15px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+        input[type=submit]{
+            margin-top: 5%;
+            padding: 20px;
+            text-transform: uppercase;
+            line-height: 0px;
+            border-radius: 15px;
+            background-color: rgb(5, 209, 5);
+        }
+        input[type=submit]:hover{
+            background-color: rgba(5, 209, 5, 0.8);
+        }
+        .section-title::after{
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: 0.5s;
+        }
+        .section-title:hover::after{
+            width: 160px;
+        }
+        .section-title .title-2 {
+            color: var(--primary-color);
+        }
+        .section-title:hover .title-1 {
+            transform: translateX(5px);
+            color: var(--primary-color);
+        }
+        .section-title:hover .title-2 {
+            color: var(--dark-color);
+        }
+        .section-title:hover .title-3 {
+            transform: translateX(-5px);
+            color: var(--primary-color);
+        }
+        .section-title span {
+            display: inline-block;
+            transition: transform 0.3s linear;
+        }
+    </style>
+    <body class="bg-slate-50">
+        <!-- Navbar -->
+        <div class="relative">
+            <header class="sm:text-gray-600 bg-slate-50/90  shadow-lg shadow-gray-500/50">
+                <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+                    <a href="#" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                        <!-- Image Logo Link -->
+                        <img class="h-12 md:h-24" src="https://www.jumpsolutions.ph/images/logo.png" title="Jump Solution" alt="Delex Pharma"/>
+                    </a>
+                    <nav class="md:ml-auto flex flex-wrap items-center align-middle text-base justify-center">
+                        <div class="grid grid-flow-col gap-4 justify-items-end">
+                            <div class="uppercase text-sm poppins-regular">
+                                <a class="mr-10 hover:text-slate-900">Home</a>
+                                <a class="mr-10 hover:text-slate-900">Company</a>
+                                <a class="mr-10 hover:text-slate-900">Services</a>
+                                <a class="mr-10 hover:text-slate-900">Solutions</a>
+                                <a class="mr-10 hover:text-slate-900">Careers</a>
+                                <a class="mr-10 hover:text-slate-900">Contact Us</a>
+                                <a class="mr-10 hover:text-slate-900">Support</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            
+            <section class="pt-20 overflow-hidden items-center justify-center flex cta-section">
+                <div class="container">
+                    <div class="section-title relative mb-10 text-center uppercase anton-regular text-5xl">
+                        <span class="title-1">Get</span>
+                        <span class="title-2">in</span>
+                        <span class="title-3">touch</span>
+                    </div>
+                </div>
+            </section>
+
+            <div class="relative rounded">
+                <div class="flex justify-center">
+                    <form id="webToLeadForm"
+                          action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DWL000002wgLt"
+                          method="POST"
+                          class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-white rounded border border-gray-200 shadow-2xl/30 p-6 sm:p-8 md:p-12 m-4 sm:m-8 md:m-10 w-full max-w-3xl">
+
+                        <input type="hidden" name='captcha_settings' value='{"keyname":"Jump_Dev_reCaptcha","fallback":"true","orgId":"00DWL000002wgLt","ts":""}'>
+                        <input type="hidden" name="oid" value="00DWL000002wgLt">
+                        <input type="hidden" name="retURL" value="https://www.jumpsolutions.ph/">
+
+                        <div class="flex flex-col">
+                            <label for="first_name" class="mb-2">First Name</label>
+                            <input id="first_name" maxlength="40" name="first_name" size="20" type="text" class="w-full" />
+                        </div>
+
+                        <div class="flex flex-col">
+                            <label for="last_name" class="mb-2"><span class="text-red-600">*</span>Last Name</label>
+                            <input id="last_name" maxlength="80" name="last_name" size="20" type="text" class="w-full" />
+                        </div>
+
+                        <div class="flex flex-col">
+                            <label for="title" class="mb-2">Title</label>
+                            <input id="title" maxlength="40" name="title" size="20" type="text" class="w-full" />
+                        </div>
+
+                        <div class="flex flex-col">
+                            <label for="company" class="mb-2"><span class="text-red-600">*</span>Company</label>
+                            <input id="company" maxlength="40" name="company" size="20" type="text" class="w-full" />
+                        </div>
+
+                        <div class="flex flex-col">
+                            <label for="email" class="mb-2">Email</label>
+                            <input id="email" maxlength="80" name="email" size="20" type="text" class="w-full" />
+                        </div>
+
+                        <div class="flex flex-col">
+                            <label for="mobile" class="mb-2">Mobile</label>
+                            <input id="mobile" maxlength="40" name="mobile" size="20" type="text" class="w-full" />
+                        </div>
+
+                        <div class="col-span-1 md:col-span-2 flex flex-col">
+                            <label for="description" class="mb-2">Message</label>
+                            <textarea id="description" name="description" class="w-full h-28 resize-none border border-solid"></textarea>
+                        </div>
+
+                        <div class="flex flex-col hidden">
+                            <label for="lead_source" class="mb-2">Lead Source</label>
+                            <select id="lead_source" name="lead_source" class="w-full">
+                                <option value="">--None--</option>
+                                <option value="Advertisement">Advertisement</option>
+                                <option value="Customer Event">Customer Event</option>
+                                <option value="Employee Referral">Employee Referral</option>
+                                <option value="External Referral">External Referral</option>
+                                <option value="Google AdWords">Google AdWords</option>
+                                <option value="Other">Other</option>
+                                <option value="Partner">Partner</option>
+                                <option value="Purchased List">Purchased List</option>
+                                <option value="Trade Show">Trade Show</option>
+                                <option value="Webinar">Webinar</option>
+                                <option value="Website" selected>Website</option>
+                            </select>
+                        </div>
+
+                        <div class="flex flex-col hidden">
+                            <label for="00NWL000002LyOD" class="mb-2">Lead Type</label>
+                            <select id="00NWL000002LyOD" name="00NWL000002LyOD" title="Lead Type" class="w-full">
+                                <option value="">--None--</option>
+                                <option value="Customer" selected>Customer</option>
+                                <option value="Distributor">Distributor</option>
+                                <option value="Internal">Internal</option>
+                                <option value="Vendor">Vendor</option>
+                            </select>
+                        </div>
+
+                        <div class="col-span-1 md:col-span-2 flex justify-center">
+                            <div class="g-recaptcha" data-sitekey="6LeED-srAAAAAB60bK_6Bi2vW4c0SB2p87Z5mLKT"></div>
+                        </div>
+
+                        <div class="col-span-1 md:col-span-2 flex justify-center">
+                            <input type="submit" name="submit" class="px-6 py-3 rounded bg-green-500 hover:bg-green-600 text-white cursor-pointer" />
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+
+
