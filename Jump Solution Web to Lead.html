@@ -31,9 +31,14 @@
             --poppins: 'Poppins', sans-serif;
             --anton: 'Anton', sans-serif;
         }
+        .poppins-regular-400 {
+            font-family: var(--poppins);
+            font-weight: 300;
+            font-style: normal;
+        }
         .poppins-regular {
             font-family: var(--poppins);
-            font-weight: 500;
+            font-weight: 400;
             font-style: normal;
         }
         .anton-regular {
@@ -180,39 +185,39 @@
                         <input type="hidden" name="oid" value="00DWL000002wgLt">
                         <input type="hidden" name="retURL" value="https://www.jumpsolutions.ph/">
 
-                        <div class="flex flex-col">
+                        <div class="flex flex-col poppins-regular-400">
                             <label for="first_name" class="mb-2">First Name</label>
-                            <input id="first_name" maxlength="40" name="first_name" size="20" type="text" class="w-full focus:outline-gray-500" />
+                            <input id="first_name" maxlength="40" name="first_name" size="20" type="text" class="w-full focus:outline-gray-500 placeholder-gray-400 placeholder:text-sm" placeholder="John" />
                         </div>
 
-                        <div class="flex flex-col">
+                        <div class="flex flex-col poppins-regular-400">
                             <label for="last_name" class="mb-2"><span class="text-red-600">*</span>Last Name</label>
-                            <input id="last_name" maxlength="80" name="last_name" size="20" type="text" class="w-full focus:outline-gray-500" required />
+                            <input id="last_name" maxlength="80" name="last_name" size="20" type="text" class="w-full focus:outline-gray-500 placeholder-gray-400 placeholder:text-sm" placeholder="Doe" required />
                         </div>
 
-                        <div class="flex flex-col">
-                            <label for="title" class="mb-2">Title</label>
-                            <input id="title" maxlength="40" name="title" size="20" type="text" class="w-full focus:outline-gray-500" />
+                        <div class="flex flex-col poppins-regular-400">
+                            <label for="title" class="mb-2">Designation</label>
+                            <input id="title" maxlength="40" name="title" size="20" type="text" class="w-full focus:outline-gray-500 placeholder-gray-400 placeholder:text-sm" placeholder="CEO" />
                         </div>
 
-                        <div class="flex flex-col">
-                            <label for="company" class="mb-2"><span class="text-red-600">*</span>Company</label>
-                            <input id="company" maxlength="40" name="company" size="20" type="text" class="w-full focus:outline-gray-500" required />
+                        <div class="flex flex-col poppins-regular-400">
+                            <label for="company" class="mb-2"><span class="text-red-600">*</span>Company Name</label>
+                            <input id="company" maxlength="40" name="company" size="20" type="text" class="w-full focus:outline-gray-500 placeholder-gray-400 placeholder:text-sm" placeholder="e.g. Jump Solutions Inc." required />
                         </div>
 
-                        <div class="flex flex-col">
+                        <div class="flex flex-col poppins-regular-400">
                             <label for="email" class="mb-2">Email</label>
-                            <input id="email" maxlength="80" name="email" size="20" type="text" class="w-full focus:outline-gray-500" />
+                            <input id="email" maxlength="80" name="email" size="20" type="text" class="w-full focus:outline-gray-500 placeholder-gray-400 placeholder:text-sm" placeholder="johndoe@email.com"/>
                         </div>
 
-                        <div class="flex flex-col">
-                            <label for="mobile" class="mb-2">Mobile</label>
-                            <input id="mobile" maxlength="40" name="mobile" size="20" type="text" class="w-full focus:outline-gray-500" />
+                        <div class="flex flex-col poppins-regular-400">
+                            <label for="mobile" class="mb-2">Contact Number</label>
+                            <input id="mobile" maxlength="40" name="mobile" size="20" type="text" class="w-full focus:outline-gray-500 placeholder-gray-400 placeholder:text-sm" placeholder="099XXXXXXXX"/>
                         </div>
 
-                        <div class="col-span-1 md:col-span-2 flex flex-col">
+                        <div class="col-span-1 md:col-span-2 flex flex-col poppins-regular-400">
                             <label for="description" class="mb-2">Message</label>
-                            <textarea id="description" name="description" class="w-full h-28 resize-none rounded-lg border-2 border-solid border-gray-400 p-2 focus:outline-gray-500"></textarea>
+                            <textarea id="description" name="description" class="w-full h-28 resize-none rounded-lg border-2 border-solid border-gray-400 p-2 focus:outline-gray-500 placeholder-gray-400 placeholder:text-sm" placeholder="Write your message here"></textarea>
                         </div>
 
                         <div class="flex flex-col hidden">
