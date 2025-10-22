@@ -175,6 +175,7 @@
             <div class="relative rounded">
                 <div class="flex justify-center">
                     <form id="webToLeadForm"
+                          onsubmit="return handleSubmit(event);"
                           action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DWL000002wgLt"
                           method="POST"
                           class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-white rounded border border-gray-200 shadow-2xl/30 p-6 sm:p-8 md:p-12 m-4 sm:m-8 md:m-10 w-full max-w-3xl">
