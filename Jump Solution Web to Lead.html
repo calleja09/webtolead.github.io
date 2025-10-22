@@ -274,7 +274,7 @@
         e.preventDefault();
 
         submitBtn.disabled = true;
-        submitBtn.classList.add("bacground-green-700");
+        submitBtn.classList.add("bg-green-700");
         submitBtn.value = "Submitting...";
         captchaError.classList.add("hidden");
     
@@ -282,6 +282,7 @@
         if (!captchaResponse) {
             captchaError.classList.remove("hidden");
             submitBtn.disabled = false;
+            submitBtn.classList.remove("bg-green-700");
             submitBtn.value = "Submit";
             return false;
         }
@@ -296,6 +297,8 @@
             // Show success message
             alert("Thank you for contacting us! We will get back to you shortly.");
             setTimeout(() => {
+                form.reset();
+                grecaptcha.reset();
                 window.location.href = "https://www.jumpsolutions.ph/";
             }, 2000);
         })
@@ -308,6 +311,12 @@
 
         return false;
     }
+
+        window.addEventListener("pageshow", function(event) {
+        if (event.persisted) {
+            form.reset();
+            grecaptcha.reset();
+        }
     
 </script>
 
