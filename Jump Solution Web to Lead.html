@@ -273,6 +273,14 @@
         submitBtn.disabled = true;
         submitBtn.value = "Submitting...";
     
+        const captchaResponse = grecaptcha.getResponse();
+        if (!captchaResponse) {
+            alert("Please complete the reCAPTCHA.");
+            submitBtn.disabled = false;
+            submitBtn.value = "Submit";
+            return false;
+        }
+
         const formData = new FormData(form);
         fetch("https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8", {
             method: "POST",
