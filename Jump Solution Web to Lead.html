@@ -250,8 +250,9 @@
                             </select>
                         </div>
 
-                        <div class="col-span-1 md:col-span-2 flex justify-center">
+                        <div class="col-span-1 md:col-span-2 flex flex-col items-center">
                             <div class="g-recaptcha" data-sitekey="6LeED-srAAAAAB60bK_6Bi2vW4c0SB2p87Z5mLKT"></div>
+                            <span id="captchaError" class="hidden text-red-500 text-sm mt-2 block">Please complete the reCAPTCHA.</span>
                         </div>
 
                         <div class="col-span-1 md:col-span-2 flex justify-center">
@@ -267,16 +268,18 @@
 <script>
     const form = document.getElementById("webToLeadForm");
     const submitBtn = document.getElementById("submitBtn");
+    const captchaError = document.getElementById("captchaError");
 
     function handleSubmit(e) {
         e.preventDefault();
 
         submitBtn.disabled = true;
         submitBtn.value = "Submitting...";
+        captchaError.classList.add("hidden");
     
         const captchaResponse = grecaptcha.getResponse();
         if (!captchaResponse) {
-            alert("Please complete the reCAPTCHA.");
+            captchaError.classList.remove("hidden");
             submitBtn.disabled = false;
             submitBtn.value = "Submit";
             return false;
