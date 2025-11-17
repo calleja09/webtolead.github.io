@@ -175,7 +175,7 @@
             <div class="relative rounded">
                 <div class="flex justify-center">
                     <form id="webToLeadForm"
-                          onsubmit="handleSubmit(event)"
+                          onsubmit="return handleSubmit(event)"
                           action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DWL000002wgLt"
                           method="POST"
                           class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-white rounded border border-gray-200 shadow-2xl/30 p-6 sm:p-8 md:p-12 m-4 sm:m-8 md:m-10 w-full max-w-3xl">
@@ -265,59 +265,27 @@
         </div>
     </body>
 </html>
+
 <script>
-    const form = document.getElementById("webToLeadForm");
-    const submitBtn = document.getElementById("submitBtn");
-    const captchaError = document.getElementById("captchaError");
+const form = document.getElementById("webToLeadForm");
+const submitBtn = document.getElementById("submitBtn");
+const captchaError = document.getElementById("captchaError");
 
-    function handleSubmit(e) {
-        e.preventDefault();
-
-        submitBtn.disabled = true;
-        submitBtn.classList.add("bg-green-900");
-        submitBtn.value = "Submitting...";
-        captchaError.classList.add("hidden");
-    
-        const captchaResponse = grecaptcha.getResponse();
-        e.preventDefault();
-        if (!captchaResponse) {
-            captchaError.classList.remove("hidden");
-            submitBtn.disabled = false;
-            submitBtn.classList.remove("bg-green-700");
-            submitBtn.value = "Submit";
-            return false;
-        }
-
-        const formData = new FormData(form);
-        fetch("https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8", {
-            method: "POST",
-            body: formData,
-            mode: "no-cors"
-        })
-        .then(() => {
-            // Show success message
-            alert("Thank you for contacting us! We will get back to you shortly.");
-            setTimeout(() => {
-                form.reset();
-                grecaptcha.reset();
-                window.location.href = "https://www.jumpsolutions.ph/";
-            }, 2000);
-        })
-        .catch((error) => {
-            console.error("Submission failed:", error);
-            alert("Submission failed. Please try again later.");
-            submitBtn.disabled = false;
-            submitBtn.value = "Submit";
-        })
-
+function handleSubmit(e) {
+    const captchaResponse = grecaptcha.getResponse();
+    if (!captchaResponse) {
+        e.preventDefault(); // stop the form from submitting
+        captchaError.classList.remove("hidden");
         return false;
     }
 
-        // window.addEventListener("pageshow", function(event) {
-        // if (event.persisted) {
-        //     form.reset();
-        //     grecaptcha.reset();
-        // }
-        // });
-    
+    // Optionally, disable the submit button for UX
+    submitBtn.disabled = true;
+    submitBtn.value = "Submitting...";
+    captchaError.classList.add("hidden");
+
+    // Let the browser do the normal form submit
+    return true;
+}
+</script>
 </script>
