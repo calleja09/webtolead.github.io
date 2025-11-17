@@ -217,7 +217,7 @@
                         </div>
 
                         <div class="col-span-1 md:col-span-2 flex flex-col poppins-regular-400">
-                            <label class="mb-2">Message</label>
+                            <label for="00NWL000003TdlE" class="mb-2">Message</label>
                             <textarea id="00NWL000003TdlE" name="00NWL000003TdlE" class="w-full h-28 resize-none rounded-lg border-2 border-solid border-gray-400 p-2 focus:outline-gray-500 placeholder-gray-400 placeholder:text-sm" placeholder="Write your message here"></textarea>
                         </div>
 
@@ -274,11 +274,12 @@
         e.preventDefault();
 
         submitBtn.disabled = true;
-        submitBtn.classList.add("bg-green-700");
+        submitBtn.classList.add("bg-green-900");
         submitBtn.value = "Submitting...";
         captchaError.classList.add("hidden");
     
         const captchaResponse = grecaptcha.getResponse();
+        e.preventDefault();
         if (!captchaResponse) {
             captchaError.classList.remove("hidden");
             submitBtn.disabled = false;
@@ -313,12 +314,10 @@
     }
 
         window.addEventListener("pageshow", function(event) {
-            if (event.persisted) {
-                form.reset();
-                grecaptcha.reset();
-            }
+        if (event.persisted) {
+            form.reset();
+            grecaptcha.reset();
+        }
         });
+    
 </script>
-
-
-
