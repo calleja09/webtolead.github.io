@@ -313,11 +313,11 @@
     }
 
         window.addEventListener("pageshow", function(event) {
-        if (event.persisted) {
-            form.reset();
-            grecaptcha.reset();
-        }
-    
+            if (event.persisted) {
+                form.reset();
+                grecaptcha.reset();
+            }
+        });
 </script>
 
 
