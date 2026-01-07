@@ -9,7 +9,7 @@
         <!-- GOOGLE FONTS -->
         <link href="https://fonts.googleapis.com/css2?family=Anton&family=Material+Symbols+Outlined&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900" rel="stylesheet" />
         <!-- FAVICON -->
-        <link rel="icon" type="image/png" href="https://jumpsolutions.ph/wp-content/uploads/2021/03/jumpsolitions.png" />
+        <link rel="icon" type="image/png" href="https://jumpsolutions.ph/wp-content/uploads/2021/03/jumpsolitions.png" 
         <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
         <script src="https://www.google.com/recaptcha/api.js"></script>
         <script>
@@ -176,15 +176,15 @@
                 <div class="flex justify-center">
                     <form id="webToLeadForm"
                           onsubmit="return handleSubmit(event)"
-                          action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DWL000002wgLt"
+                          action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DWB0000061nJN"
                           method="POST"
                           class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-white rounded border border-gray-200 shadow-2xl/30 p-6 sm:p-8 md:p-12 m-4 sm:m-8 md:m-10 w-full max-w-3xl">
 
                         <span class="text-red-600 text-sm mb-2">* Indicates required question</span><br>
 
-                        <input type="hidden" name='captcha_settings' value='{"keyname":"Jump_Dev_reCaptcha","fallback":"true","orgId":"00DWL000002wgLt","ts":""}'>
-                        <input type="hidden" name="oid" value="00DWL000002wgLt">
-                        <input type="hidden" name="retURL" value="https://www.jumpsolutions.ph/">
+                        <input type=hidden name='captcha_settings' value='{"keyname":"Jump_UAT_reCaptcha","fallback":"true","orgId":"00DWB0000061nJN","ts":""}'>
+                        <input type=hidden name="oid" value="00DWB0000061nJN">
+                        <input type=hidden name="retURL" value="http://">
 
                         <div class="flex flex-col poppins-regular-400">
                             <label for="first_name" class="mb-2">First Name</label>
@@ -218,7 +218,7 @@
 
                         <div class="col-span-1 md:col-span-2 flex flex-col poppins-regular-400">
                             <label class="mb-2">Message</label>
-                            <textarea id="00NWL000003TdlE" name="00NWL000003TdlE" class="w-full h-28 resize-none rounded-lg border-2 border-solid border-gray-400 p-2 focus:outline-gray-500 placeholder-gray-400 placeholder:text-sm" rows="3" type="text" wrap="soft" placeholder="Write your message here"></textarea>
+                            <textarea id="00NWB000002IUph" name="00NWB000002IUph" class="w-full h-28 resize-none rounded-lg border-2 border-solid border-gray-400 p-2 focus:outline-gray-500 placeholder-gray-400 placeholder:text-sm" rows="3" type="text" wrap="soft" placeholder="Write your message here"></textarea>
                         </div>
 
                         <div class="flex flex-col hidden">
@@ -240,8 +240,8 @@
                         </div>
 
                         <div class="flex flex-col hidden">
-                            <label for="00NWL000002LyOD" class="mb-2">Lead Type</label>
-                            <select id="00NWL000002LyOD" name="00NWL000002LyOD" title="Lead Type" class="w-full">
+                            <label for="00NWB000002KsjY" class="mb-2">Lead Type</label>
+                            <select id="00NWB000002KsjY" name="00NWB000002KsjY" title="Lead Type" class="w-full">
                                 <option value="">--None--</option>
                                 <option value="Customer" selected>Customer</option>
                                 <option value="Distributor">Distributor</option>
